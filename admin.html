@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Admin Dashboard for ProPlanner">
+  <title>ProPlanner | Admin Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="admin-container">
+    <aside class="admin-sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-calendar-alt"></i> ProPlanner</h2>
+        <p>Admin Dashboard</p>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="active"><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+          <li><a href="#"><i class="fas fa-users"></i> Users</a></li>
+          <li><a href="#"><i class="fas fa-chart-pie"></i> Analytics</a></li>
+          <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+        </ul>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <button id="logoutBtn" class="btn btn-secondary btn-block">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </div>
+    </aside>
+    
+    <main class="admin-main">
+      <header class="admin-header">
+        <div class="header-left">
+          <h1>Dashboard Overview</h1>
+          <p>Welcome back, <span id="adminName">Admin</span></p>
+        </div>
+        <div class="header-right">
+          <div class="admin-search">
+            <input type="text" placeholder="Search...">
+            <button><i class="fas fa-search"></i></button>
+          </div>
+          <div class="admin-profile">
+            <img src="https://ui-avatars.com/api/?name=Admin&background=4361ee&color=fff" alt="Admin">
+          </div>
+        </div>
+      </header>
+      
+      <section class="admin-content">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon" style="background-color: #ebf0ff;">
+              <i class="fas fa-users" style="color: #4361ee;"></i>
+            </div>
+            <div class="stat-info">
+              <h3 id="totalUsers">0</h3>
+              <p>Total Users</p>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon" style="background-color: #ebfbee;">
+              <i class="fas fa-calendar-check" style="color: #2e7d32;"></i>
+            </div>
+            <div class="stat-info">
+              <h3 id="activeUsers">0</h3>
+              <p>Active Today</p>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon" style="background-color: #fff3bf;">
+              <i class="fas fa-tasks" style="color: #f8961e;"></i>
+            </div>
+            <div class="stat-info">
+              <h3 id="totalTasks">0</h3>
+              <p>Total Tasks</p>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="stat-icon" style="background-color: #ffebee;">
+              <i class="fas fa-chart-line" style="color: #f72585;"></i>
+            </div>
+            <div class="stat-info">
+              <h3 id="completionRate">0%</h3>
+              <p>Avg. Completion</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="recent-activity">
+          <h2>Recent Activity</h2>
+          <div class="activity-list" id="activityList">
+            <!-- Activity items will be added here -->
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="auth.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
